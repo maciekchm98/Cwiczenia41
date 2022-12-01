@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 import java.util.Random;
 
@@ -20,13 +19,24 @@ public class Zadanie6 {
         }
        {
             Random rand = new Random();
-            double losowaLiczba1 = rand.nextDouble(a, b);
-            double losowaLiczba2 = rand.nextDouble(a, b);
-            double losowaLiczba3 = rand.nextDouble(a, b);
-            System.out.print("Wartości generowane losowo: " + losowaLiczba1 + ", " + losowaLiczba2 + ", " + losowaLiczba3);
+            double r1 = rand.nextDouble(a, b);
+            double r2 = rand.nextDouble(a, b);
+            double r3 = rand.nextDouble(a, b);
+            System.out.print(" Wartości generowane losowo: " + r1 + ", " + r2 + ", " + r3);
 
-
-
+           if (r1<r2 && r2<r3){
+               System.out.println(r1+" < "+r2+" < "+r3);
+           }else if (r1<r3 && r3<r2){
+               System.out.println(r1+" < "+r3+" < "+r2);
+           }else if (r2<r1 && r1<r3){
+               System.out.println(r2+" < "+r1+" < "+r3);
+           }else if (r2<r3 && r3<r1){
+               System.out.println(r2+" < "+r3+" < "+r1);
+           }else if (r3<r1 && r1<r2){
+               System.out.println(r3+" < "+r1+" < "+r2);
+           }else if (r3<r2 && r2<r1){
+               System.out.println(r3+" < "+r2+" < "+r1);
+           }
        }
     }
 }
