@@ -11,32 +11,32 @@ public class Zadanie6 {
         a = sc.nextDouble();
         System.out.print("Podaj 2 liczbę: ");
         b = sc.nextDouble();
-        if (a > b) {
-            System.out.print("Wybrany przedział:[" + a + ", " + b + "] ");
+        if (a >= b){
+            double c = a;
+            a = b;
+            b = c;
         }
-        else if (a < b) {
-            System.out.print("Wybrany przedział:[" + b + ", " + a + "] ");
-        }
-       {
-            Random rand = new Random();
-            double r1 = rand.nextDouble(a, b);
-            double r2 = rand.nextDouble(a, b);
-            double r3 = rand.nextDouble(a, b);
-            System.out.print(" Wartości generowane losowo: " + r1 + ", " + r2 + ", " + r3);
+        System.out.println("a = " + a + ","+" b = " + b);
 
-           if (r1<r2 && r2<r3){
-               System.out.println(r1+" < "+r2+" < "+r3);
-           }else if (r1<r3 && r3<r2){
-               System.out.println(r1+" < "+r3+" < "+r2);
-           }else if (r2<r1 && r1<r3){
-               System.out.println(r2+" < "+r1+" < "+r3);
-           }else if (r2<r3 && r3<r1){
-               System.out.println(r2+" < "+r3+" < "+r1);
-           }else if (r3<r1 && r1<r2){
-               System.out.println(r3+" < "+r1+" < "+r2);
-           }else if (r3<r2 && r2<r1){
-               System.out.println(r3+" < "+r2+" < "+r1);
-           }
+        {
+            Random rand = new Random();
+            double n1 = rand.nextDouble(a, b);
+            double n2 = rand.nextDouble(a, b);
+            double n3 = rand.nextDouble(a, b);
+            System.out.print("Wartości generowane losowo: " + n1 + ", " + n2 + ", " + n3 +" ");
+
+           if (n1 < n2 && n2 < n3)
+           {System.out.println(n1 + " < " + n2 + " < " + n3);}
+           else if (n1 < n3 && n3 < n2)
+           {System.out.println(n1 + " < " + n3 + " < " + n2);}
+           else if (n2 < n1 && n1 < n3)
+           {System.out.println(n2 + " < " + n1 + " < " + n3);}
+           else if (n2 < n3 && n3 < n1)
+           {System.out.println(n2 + " < " + n3 + " < " + n1);}
+           else if (n3 < n1 && n1 < n2)
+           {System.out.println(n3 + " < " + n1 + " < " + n2);}
+           else if (n3<n2 && n2<n1)
+           {System.out.println(n3 + " < " + n2 + " < " + n1);}
        }
     }
 }
