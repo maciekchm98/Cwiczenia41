@@ -17,7 +17,6 @@ public class Zadanie6 {
             b = c;
         }
         System.out.println("a = " + a + ","+" b = " + b);
-
         {
             Random rand = new Random();
             double n1 = rand.nextDouble(a, b);
